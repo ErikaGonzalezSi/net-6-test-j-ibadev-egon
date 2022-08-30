@@ -19,6 +19,7 @@ namespace net_6_test_j_ibadev_egon_pr.Models
       
         [Required(ErrorMessage="Survey Type is required")]// Default Error Message for Survey Type
         public int IdSurveyType { get; set; }
+        [Required(ErrorMessage="Template is required")]// Default Error Message for template
         public string Template { get; set; } = null!;
         public bool? Disable { get; set; }
         public bool? Published { get; set; }

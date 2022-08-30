@@ -21,16 +21,19 @@ builder.Services.AddControllers()
             var Error = context.ModelState.Keys.Select(k => k).First();
             var ErrorDescription = context.ModelState[Error]?.Errors.Select(e => e.ErrorMessage).First();
             var TechnicalError = "Error validate data model";
-            ErrorMessage FormatMessage = new ErrorMessage{
-                Error= Error,
-                ErrorDescription= ErrorDescription,
-                TechnicalError= TechnicalError
+            ErrorMessage FormatMessage = new ErrorMessage
+            {
+                Error = Error,
+                ErrorDescription = ErrorDescription,
+                TechnicalError = TechnicalError
 
             };
-            
+
             return new BadRequestObjectResult(FormatMessage);
         };
     });
+
+//builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 // Database connection
 builder.Services.AddDbContext<EERPContext>(options =>
