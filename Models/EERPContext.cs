@@ -5,11 +5,7 @@
 -Epic: EP003 
 -UH: UH002, UH003
 ***************************************************************/
-
-using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace net_6_test_j_ibadev_egon_pr.Models
 {

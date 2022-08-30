@@ -6,8 +6,6 @@
 -UH: UH002, UH003
 ***************************************************************/
 
-using System;
-using System.Collections.Generic;
 
 namespace net_6_test_j_ibadev_egon_pr.Models
 {

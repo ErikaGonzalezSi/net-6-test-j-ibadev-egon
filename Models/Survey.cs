@@ -6,20 +6,24 @@
 -UH: UH002, UH003
 ***************************************************************/
 
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace net_6_test_j_ibadev_egon_pr.Models
 {
     public partial class Survey
     {
         public int IdSurvey { get; set; }
+
+        [Required(ErrorMessage="Title is required")]// Default Error Message for Title
         public string Title { get; set; } = null!;
+      
+        [Required(ErrorMessage="Survey Type is required")]// Default Error Message for Survey Type
         public int IdSurveyType { get; set; }
         public string Template { get; set; } = null!;
-        public bool Disable { get; set; }
-        public bool Published { get; set; }
+        public bool? Disable { get; set; }
+        public bool? Published { get; set; }
+        
 
-        public virtual SurveyType IdSurveyTypeNavigation { get; set; } = null!;
+        public virtual SurveyType? IdSurveyTypeNavigation { get; set; } = null!;
     }
 }
